@@ -2,17 +2,23 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{geometry}
-\title{mmg}
-\author{Corentin Prigent}
-\date{October, 7 2024}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks
+}
 
-\newcommand{\mmg}{\textbf{mmg} }
+\newcommand{\mmg}{\textbf{mmg}}
+
+\title{\mmg}
+\author{Corentin Prigent}
+\date{\today}
 
 \begin{document}
 \maketitle
 \tableofcontents
 
 \input{src/mmg-introduction.tex}
+\input{src/mmg-using.tex}
 \input{src/mmg-data-structures.tex}
 \input{src/mmg-remeshing-process.tex}
 

@@ -1,10 +1,10 @@
 \chapter{Data structures}
 
-In \mmg, several data structures are defined in order to represent and manipulate different entities such as tetrahedra, triangles, or meshes.
+In \mmg{}, several data structures are defined in order to represent and manipulate different entities such as tetrahedra, triangles, or meshes.
 
 \section{Mesh}
 
-The main data structure that is used throughout \mmg is the mesh structure \texttt{MMG5\_Mesh}.
+The main data structure that is used throughout \mmg{} is the mesh structure \texttt{MMG5\_Mesh}.
 This structure contains the following fields:
 
 \begin{itemize}
@@ -15,49 +15,3 @@ This structure contains the following fields:
 \item \texttt{ver}   : integer Version of the mesh file
 
 \end{itemize}
-
-\begin{equation}
-  int       type; /*!< Type of the mesh */
-  MMG5\_int  npi,nti,nai,nei,np,na,nt,ne,npmax,namax,ntmax,nemax,xpmax,xtmax;
-  MMG5\_int  nquad,nprism; /*!< number of quadrangles and prisms */
-  int       nsols; /*!< number of solutions (metric excluded) in the solution file (lower than \a NSOLS_MAX)*/
-  MMG5\_int  nc1;
-  MMG5\_int  base; /*!< Used with \a flag to know if an entity has been
-                    treated */
-  MMG5\_int  mark; /*!< Flag for delaunay (to know if an entity has
-                    been treated) */
-  MMG5\_int  xp,xt,xpr; /*!< Number of surfaces points, triangles/tetrahedra and prisms */
-  MMG5\_int  npnil; /*!< Index of first unused point */
-  MMG5\_int  nenil; /*!< Index of first unused element */
-  MMG5\_int  nanil; /*!< Index of first unused edge (2d only)*/
-  MMG5\_int  *adja; /*!< Table of tetrahedron adjacency: if
-                    \f$adja[4*(i-1)+1+j]=4*k+l\f$ then the \f$i^{th}\f$ and
-                    \f$k^th\f$ tetrahedra are adjacent and share their
-                    faces \a j and \a l (resp.) */
-  MMG5\_int  *adjt; /*!< Table of triangles adjacency: if
-                    \f$adjt[3*(i-1)+1+j]=3*k+l\f$ then the \f$i^{th}\f$ and
-                    \f$k^th\f$ triangles are adjacent and share their
-                    edges \a j and \a l (resp.) */
-  MMG5\_int  *adjapr; /*!< Table of prisms adjacency: if
-                    \f$adjapr[5*(i-1)+1+j]=5*k+l\f$ then the \f$i^{th}\f$ and
-                    \f$k^th\f$ prism are adjacent and share their
-                    faces \a j and \a l (resp.) */
-  MMG5_int  *adjq; /*!< Table of quadrangles adjacency: if
-                    \f$adjq[4*(i-1)+1+j]=4*k+l\f$ then the \f$i^{th}\f$ and
-                    \f$k^th\f$ quadrilaterals are adjacent and share their
-                    edges \a j and \a l (resp.) */
-  int       *ipar;  /*!< Store indices of the local parameters */
-  MMG5\_pPoint    point; /*!< Pointer toward the \ref MMG5_Point structure */
-  MMG5\_pxPoint   xpoint; /*!< Pointer toward the \ref MMG5_xPoint structure */
-  MMG5\_pTetra    tetra; /*!< Pointer toward the \ref MMG5_Tetra structure */
-  MMG5\_pxTetra   xtetra; /*!< Pointer toward the \ref MMG5_xTetra structure */
-  MMG5\_pPrism    prism; /*!< Pointer toward the \ref MMG5_Prism structure */
-  MMG5\_pxPrism   xprism; /*!< Pointer toward the \ref MMG5_pxPrism structure */
-  MMG5\_pTria     tria; /*!< Pointer toward the \ref MMG5_Tria structure */
-  MMG5\_pQuad     quadra; /*!< Pointer toward the \ref MMG5_Quad structure */
-  MMG5\_pEdge     edge; /*!< Pointer toward the \ref MMG5_Edge structure */
-  MMG5\_HGeom     htab; /*!< \ref MMG5_HGeom structure */
-  MMG5\_Info      info; /*!< \ref MMG5_Info structure */
-  char           *namein; /*!< Input mesh name */
-  char           *nameout; /*!< Output mesh name */
-\end{equation}
