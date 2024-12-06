@@ -1,17 +1,20 @@
+# Minimal makefile for Sphinx documentation
+#
 
-COMP = pdflatex
-SRC  = src/main.tex
-PDF  = documentation-mmg.pdf
-DIR  = output
+# You can set these variables from the command line, and also
+# from the environment for the first two.
+SPHINXOPTS    ?=
+SPHINXBUILD   ?= sphinx-build
+SOURCEDIR     = source
+BUILDDIR      = build
 
-all: check-output-dir pdf
+# Put it first so that "make" without argument is like "make help".
+help:
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-pdf : $(SRC)
-	$(COMP) -output-directory=$(DIR) -jobname=mmg-manual $(SRC)
-	$(COMP) -output-directory=$(DIR) -jobname=mmg-manual $(SRC)
+.PHONY: help Makefile
 
-check-output-dir :
-	@if [ ! -d "$(DIR)" ]; then \
-		echo "Directory $(DIR) does not exist. Creating..."; \
-		mkdir -p $(DIR); \
-	fi
+# Catch-all target: route all unknown targets to Sphinx using the new
+# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+%: Makefile
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
