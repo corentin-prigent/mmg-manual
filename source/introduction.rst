@@ -45,22 +45,22 @@ Man pages
 ---------
 
 Man pages are available inside the **doc/man** directory:
-  * To see the **mmg2d** man page, just run `man ./doc/man/mmg2d.1.gz`
-  * To see the **mmgs** man page, run `man ./doc/man/mmgs.1.gz`
-  * To see the **mmg3d** man page, run `man ./doc/man/mmg3d.1.gz`
+  * To see the **mmg2d** man page, just run ``man ./doc/man/mmg2d.1.gz``
+  * To see the **mmgs** man page, run ``man ./doc/man/mmgs.1.gz``
+  * To see the **mmg3d** man page, run ``man ./doc/man/mmg3d.1.gz``
 
 Code documentation
 ------------------
 
-Run the `make doc` command to build the Doxygen documentation, after running `cmake`
-  with the option `-DBUILD_DOC=yes` if you did not already do so.
-  You may wish to adapt `build/Doxyfile` to your liking.
-  * To see the **mmg** documentation, open the file `<build>/doc/index.html`.
+Run the ``make doc`` command to build the Doxygen documentation, after running ``cmake``
+  with the option ``-DBUILD_DOC=yes`` if you did not already do so.
+  You may wish to adapt ``build/Doxyfile`` to your liking.
+  * To see the **mmg** documentation, open the file ``<build>/doc/index.html``.
 
 Platforms
 =========
 
-The **mmg** applications are tested on OS X and on most of the Linux platforms.
+The **mmg** applications are tested on macOS and on most of the Linux platforms.
 
 Contributing
 ============
