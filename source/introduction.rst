@@ -67,6 +67,7 @@ Contributing
 
 Your contributions to the **mmg** project are welcome. You can help us to improve
 our code by many means:
+
   * pull requests: please follow the [guidelines on the wiki](https://github.com/MmgTools/Mmg/wiki/Developers-wiki#pull-requests);
   * feature requests: please use the [Mmg forum](https://forum.mmgtools.org/);
   * bug reports: please use the [GitHub issue tracker](https://github.com/MmgTools/mmg/issues/new);

@@ -2,7 +2,7 @@ Downloading, compiling and installing **mmg**
 =============================================
 
 Required tools
-==============
+--------------
 
 In order to obtain and compile **mmg**, the following tools are needed:
 
@@ -23,7 +23,7 @@ Note that if you use Microsoft Visual Studio (Windows OS), you can simply activa
 
 
 Download and compiling **mmg**
-==============================
+------------------------------
 
 Unix-like OS (Linux, macOS...)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -170,7 +170,7 @@ Again, if you use some specific options and want to make the CMake configuration
 .. _installation_examples:
 
 Examples of installation scripts
-================================
+--------------------------------
 
 The following shell script ``configure.sh`` can be used to build the project on UNIX-like OS. It is possible to personalize the compilation flags and library paths::
 
