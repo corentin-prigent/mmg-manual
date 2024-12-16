@@ -19,9 +19,9 @@ Generic options
 ``-debug``
     Save a default parameter file (extension .mmg<2d|s|3d>) that contains the parameters applied on different kind of entities.
 
-********************
-File specifications:
-********************
+*******************
+File specifications
+*******************
 
 ``-in input_mesh_file``
 	Input triangulation.
@@ -32,9 +32,9 @@ File specifications:
 ``-met  metric_file``
 	Load metric file in level-set mode in order to discretize a level-set and to adapt the output mesh to a metric in one command.
 
-***********
-Parameters:
-***********
+**********
+Parameters
+**********
 
 ``-A``
 	Force anisotropic mesh adaptation without metric.
