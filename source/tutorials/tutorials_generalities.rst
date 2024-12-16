@@ -1,6 +1,4 @@
-#########
-Tutorials
-#########
+
 
 Once installed, **mmg** can be used a command-line tool in any given shell.
 Three different software are produced by the compilation, one for each given configuration: **mmg2d**,

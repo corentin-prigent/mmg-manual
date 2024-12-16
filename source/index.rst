@@ -11,6 +11,6 @@ mmg documentation
    
    introduction
    installation
-   tutorials
+   Tutorials <tutorials/tutorials_index.rst>
    remeshing_process
    data_structures
