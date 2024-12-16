@@ -1,4 +1,6 @@
-
+############
+Generalities
+############
 
 Once installed, **mmg** can be used a command-line tool in any given shell.
 Three different software are produced by the compilation, one for each given configuration: **mmg2d**,
@@ -51,13 +53,15 @@ Lagrangian displacement
 Main options for mesh adaptation
 ********************************
 
+
+
 ***********
 Output data
 ***********
 
-*********
-Tutorials
-*********
+########
+Examples
+########
 
 
 
