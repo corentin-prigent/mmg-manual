@@ -1,5 +1,6 @@
-Using **mmg**
-*************
+#########
+Tutorials
+#########
 
 Once installed, **mmg** can be used a command-line tool in any given shell.
 Three different software are produced by the compilation, one for each given configuration: **mmg2d**,
@@ -9,12 +10,12 @@ A help message containing a summary of the main options may be printed::
 
     mmg3d_O3 -h
 
-
+**********
 Input data
-==========
+**********
 
 Mesh data
----------
+#########
 
 Input meshes may be provided in several different formats:
 medit (ASCII or binary), gmsh (ASCII or binary), vtk and vtu.
@@ -22,7 +23,7 @@ An input mesh name is mandatory and is the only positional argument of **mmg**.
 The input mesh name may be specified without the extension.
 
 Metric data
------------
+###########
 
 For mesh adaptation with respect to a given metric (or size map),
 metric data should be provided according to mesh file format.
@@ -41,15 +42,24 @@ If VTK file formats (.vtk or .vtu) are used, a point data field should
 be given in the mesh file with the ``:metric`` name.
 
 Solution file for level-set discretization
-------------------------------------------
+##########################################
 
 For level-set discretization, 
 
 Lagrangian displacement
------------------------
+#######################
 
+********************************
 Main options for mesh adaptation
-================================
+********************************
 
+***********
 Output data
-===========
+***********
+
+*********
+Tutorials
+*********
+
+
+

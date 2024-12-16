@@ -1,5 +1,6 @@
+###############
 Data structures
-===============
+###############
 
 In **mmg**, several data structures are defined in order to represent and 
 manipulate different entities such as tetrahedra, triangles, or meshes.

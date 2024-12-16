@@ -1,8 +1,10 @@
-Downloading, compiling and installing **mmg**
-=============================================
+#######
+Install
+#######
 
+**************
 Required tools
---------------
+**************
 
 In order to obtain and compile **mmg**, the following tools are needed:
 
@@ -21,12 +23,12 @@ Note that if you use Microsoft Visual Studio (Windows OS), you can simply activa
         
       Add CMake to the system PATH for all users
 
-
+******************************
 Download and compiling **mmg**
-------------------------------
+******************************
 
 Unix-like OS (Linux, macOS...)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+##############################
 
 1. Get the repository::
 
@@ -112,14 +114,14 @@ The **mmg2d**, **mmgs** and **mmg3d** applications are available under the ``mmg
 Note that if you use some specific options and want to set them easily, you can use a shell script to execute the previous commands. An example is provided in section :ref:`installation_examples`.
 
 Windows OS
-^^^^^^^^^^
+##########
 
 The following compilation can be performed in any modern version of *Windows*
 (AKA 7, 8, 8.1 and 10). A basic knowledge of Windows is assumed (execute
 commands in cmd, create directories, etc...).
 
 Compile with VisualStudio
-"""""""""""""""""""""""""
+*************************
 
 1. Get the **Visual Studio** software: it can be downloaded `here <https://www.visualstudio.com/downloads/>`_
 
@@ -145,7 +147,7 @@ Once the configuration script has finished without errors a ``mmg.sln`` file wil
    Finally, in order to compile Mmg, right click the ``INSTALL`` project and select the option ``BUILD``.
 
 Compile with MinGW
-""""""""""""""""""
+******************
 
 1. Get a **C Compiler**:
 
@@ -170,7 +172,7 @@ Again, if you use some specific options and want to make the CMake configuration
 .. _installation_examples:
 
 Examples of installation scripts
---------------------------------
+################################
 
 The following shell script ``configure.sh`` can be used to build the project on UNIX-like OS. It is possible to personalize the compilation flags and library paths::
 

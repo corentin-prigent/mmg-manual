@@ -1,10 +1,10 @@
+############
 Introduction
-************
+############
 
+*************
 About **mmg**
-=============
-
-
+*************
 
 **mmg** is an open-source software for bidimensional and tridimensional
 surface and volume remeshing. 
@@ -18,31 +18,33 @@ It is compatible with most operating systems (Linux, macOS, Windows).
   * the **mmg3d** application and library: adaptation and optimization of a tetrahedral mesh, isovalue discretization and lagrangian movement;
   * the **mmg** library gathering the **mmg2d**, **mmgs** and **mmg3d** libraries.
 
+**********************************
 Downloading and installing **mmg**
-==================================
+**********************************
 
 For the download and installation of **mmg**, please refer to the :doc:`installation` section.
 
+*************
 Documentation
-=============
+*************
 
 Project web page
-----------------
+================
 
-Actualities of the project and software tutorials can be found on the [mmgtools](http://www.mmgtools.org) web page.
+Actualities of the project and software tutorials can be found on the `mmgtools <http://www.mmgtools.org>`_ web page.
 
 Forum
------
+=====
 
-Share your comments and issues with other members of the Mmg community on the [Mmg forum](https://forum.mmgtools.org/).
+Share your comments and issues with other members of the Mmg community on the `mmg forum <https://forum.mmgtools.org/>`_.
 
 GitHub Wiki
------------
+===========
 
-More detailed information about the compilation and configuration of Mmg applications is available on the project [wiki](https://github.com/MmgTools/mmg/wiki).
+More detailed information about the compilation and configuration of Mmg applications is available on the project `wiki <https://github.com/MmgTools/mmg/wiki>`_.
 
 Man pages
----------
+=========
 
 Man pages are available inside the **doc/man** directory:
   * To see the **mmg2d** man page, just run ``man ./doc/man/mmg2d.1.gz``
@@ -50,20 +52,22 @@ Man pages are available inside the **doc/man** directory:
   * To see the **mmg3d** man page, run ``man ./doc/man/mmg3d.1.gz``
 
 Code documentation
-------------------
+==================
 
 Run the ``make doc`` command to build the Doxygen documentation, after running ``cmake``
   with the option ``-DBUILD_DOC=yes`` if you did not already do so.
   You may wish to adapt ``build/Doxyfile`` to your liking.
   * To see the **mmg** documentation, open the file ``<build>/doc/index.html``.
 
+*********
 Platforms
-=========
+*********
 
 The **mmg** applications are tested on macOS and on most of the Linux platforms.
 
+************
 Contributing
-============
+************
 
 Your contributions to the **mmg** project are welcome. You can help us to improve
 our code by many means:
@@ -72,22 +76,25 @@ our code by many means:
   * feature requests: please use the [Mmg forum](https://forum.mmgtools.org/);
   * bug reports: please use the [GitHub issue tracker](https://github.com/MmgTools/mmg/issues/new);
 
+**************
 About the team
-==============
+**************
 
 Mmg's current developers and maintainers are Charles Dapogny, Cécile Dobrzynski, Pascal Frey and Algiane Froehly.
 
 Contact: contact@mmgtools.org
 
+*********************
 License and copyright
-=====================
+*********************
 
 Code is under the [terms of the GNU Lesser General Public License](https://raw.githubusercontent.com/MmgTools/mmg/master/LICENSE).
 
 Copyright © Bx INP/Inria/UBordeaux/UPMC, 2004- .
 
+*********
 Reference
-=========
+*********
 
 [Tetrahedral remeshing in the context of large-scale numerical simulation and high performance computing - _G. Balarac, F. Basile, P. Bénard, F. Bordeu, J.-B. Chapelier, L. Cirrottola, G. Caumon, C. Dapogny, P. Frey, A. Froehly, G. Ghigliotti, R. Laraufie, G. Lartigue, C. Legentil, R. Mercier, V. Moureau, C. Nardoni, S. Pertant and M. Zakari_ - submitted, (2021)](https://membres-ljk.imag.fr/Charles.Dapogny/publis/mmgapp2.pdf)
 
