@@ -49,19 +49,10 @@ For level-set discretization,
 Lagrangian displacement
 #######################
 
-********************************
-Main options for mesh adaptation
-********************************
-
-
-
 ***********
 Output data
 ***********
 
-########
-Examples
-########
 
 
 
