@@ -13,5 +13,5 @@ mmg documentation
    introduction
    installation
    User guide <user_guide/user_index.rst>
-   remeshing_process
+   Remeshing process <developer_guide/developer_index.rst>
    data_structures
