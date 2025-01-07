@@ -1,0 +1,2 @@
+sphinx_math_dollar
+sphinx.ext.mathjax
