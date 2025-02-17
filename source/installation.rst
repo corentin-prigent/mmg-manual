@@ -1,6 +1,6 @@
-#######
-Install
-#######
+############
+Installation
+############
 
 **************
 Required tools
@@ -30,16 +30,13 @@ Download and compiling **mmg**
 Unix-like OS (Linux, macOS...)
 ##############################
 
-1. Get the repository::
+1. Get the repository by running any of these two command lines::
 
-        wget https://github.com/MmgTools/mmg/archive/master.zip
-    
-  or::
-  
-        git clone https://github.com/MmgTools/mmg.git
+    wget https://github.com/MmgTools/mmg/archive/master.zip
+    git clone https://github.com/MmgTools/mmg.git
 
 
-  The project sources are available under the **src/** directory, see:
+The project source file are available under the **src/** directory:
    * **src/mmg2d/**   for files related to the mmg2d application;
    * **src/mmgs/**   for files related to the mmgs application;
    * **src/mmg3d/**  for files related to the mmg3d application;
@@ -101,9 +98,9 @@ and disables the use of the **SCOTCH** library::
 
 By default:
 
-   * the project is configured in release mode;
-   * it uses **SCOTCH** library if it is found;
-   * it builds the static **mmg3d** library (but not the shared one and the examples).
+* the project is configured in release mode;
+* if found, **SCOTCH** library is used;
+* static **mmg3d** library is built (but not the shared one and the examples).
 
 A complete list of configuration options may be accessible using the ``ccmake`` command::
 

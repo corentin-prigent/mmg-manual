@@ -7,6 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import sys
 import pathlib
+import subprocess, os
 
 project = 'mmg'
 copyright = '2024, Prigent'
@@ -15,15 +16,22 @@ author = 'Prigent'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-sys.path.append(pathlib.Path('/Users/corentin/python/lib/python3.13/site-packages/breathe'))
+read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 
-extensions = ['sphinx_math_dollar','sphinx.ext.mathjax','breathe']
+# if read_the_docs_build:
+
+#      subprocess.call('cd ../../build/doc; doxygen', shell=True)
+
+#sys.path.append(pathlib.Path('/Users/corentin/python/lib/python3.13/site-packages/breathe'))
+
+extensions = ['sphinx_math_dollar','sphinx.ext.mathjax']
 
 templates_path = ['_templates']
 exclude_patterns = []
 
-breathe_projects = {"mmg-doxy": "/Users/corentin/Apps/mmg/build/doc/xml"}
-breathe_default_project = "mmg-doxy"
+#breathe_projects = {"mmg-doxy": "/Users/corentin/Apps/mmg/build/doc/xml"}
+#breathe_projects = {"mmg-doxy": "../../build/doc/xml"}
+#breathe_default_project = "mmg-doxy"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

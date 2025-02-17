@@ -72,15 +72,15 @@ Contributing
 Your contributions to the **mmg** project are welcome. You can help us to improve
 our code by many means:
 
-  * pull requests: please follow the [guidelines on the wiki](https://github.com/MmgTools/Mmg/wiki/Developers-wiki#pull-requests);
-  * feature requests: please use the [Mmg forum](https://forum.mmgtools.org/);
-  * bug reports: please use the [GitHub issue tracker](https://github.com/MmgTools/mmg/issues/new);
+  * pull requests: please follow the `guidelines on the wiki <https://github.com/MmgTools/Mmg/wiki/Developers-wiki#pull-requests>`_
+  * feature requests: please use the `mmg forum <https://forum.mmgtools.org/>`_
+  * bug reports: please use the `GitHub issue tracker <https://github.com/MmgTools/mmg/issues/new>`_
 
 **************
 About the team
 **************
 
-Mmg's current developers and maintainers are Charles Dapogny, Cécile Dobrzynski, Pascal Frey and Algiane Froehly.
+**mmg** current developers and maintainers are Nicolas Barral, Charles Dapogny and Corentin Prigent.
 
 Contact: contact@mmgtools.org
 
@@ -88,7 +88,7 @@ Contact: contact@mmgtools.org
 License and copyright
 *********************
 
-Code is under the [terms of the GNU Lesser General Public License](https://raw.githubusercontent.com/MmgTools/mmg/master/LICENSE).
+Code is under the `terms of the GNU Lesser General Public License <https://raw.githubusercontent.com/MmgTools/mmg/master/LICENSE>`_ 
 
 Copyright © Bx INP/Inria/UBordeaux/UPMC, 2004- .
 
@@ -96,8 +96,8 @@ Copyright © Bx INP/Inria/UBordeaux/UPMC, 2004- .
 Reference
 *********
 
-[Tetrahedral remeshing in the context of large-scale numerical simulation and high performance computing - _G. Balarac, F. Basile, P. Bénard, F. Bordeu, J.-B. Chapelier, L. Cirrottola, G. Caumon, C. Dapogny, P. Frey, A. Froehly, G. Ghigliotti, R. Laraufie, G. Lartigue, C. Legentil, R. Mercier, V. Moureau, C. Nardoni, S. Pertant and M. Zakari_ - submitted, (2021)](https://membres-ljk.imag.fr/Charles.Dapogny/publis/mmgapp2.pdf)
+`Tetrahedral remeshing in the context of large-scale numerical simulation and high performance computing - _G. Balarac, F. Basile, P. Bénard, F. Bordeu, J.-B. Chapelier, L. Cirrottola, G. Caumon, C. Dapogny, P. Frey, A. Froehly, G. Ghigliotti, R. Laraufie, G. Lartigue, C. Legentil, R. Mercier, V. Moureau, C. Nardoni, S. Pertant and M. Zakari_ - submitted, (2021) <https://membres-ljk.imag.fr/Charles.Dapogny/publis/mmgapp2.pdf>`_
 
-[Three-dimensional adaptive domain remeshing, implicit domain meshing, and applications to free and moving boundary problems - _C. Dapogny, C. Dobrzynski and P. Frey_ - April 1, 2014 - _JCP_](http://www.sciencedirect.com/science/article/pii/S0021999114000266)
+`Three-dimensional adaptive domain remeshing, implicit domain meshing, and applications to free and moving boundary problems - _C. Dapogny, C. Dobrzynski and P. Frey_ - April 1, 2014 - _JCP_ <http://www.sciencedirect.com/science/article/pii/S0021999114000266>`_
 
 
