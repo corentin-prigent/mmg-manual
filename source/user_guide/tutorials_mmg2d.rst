@@ -88,7 +88,7 @@ The resulting mesh is represented figure 3.
 Mesh adaptation to a solution
 #############################
 
-We start from the :doc:`hole.mesh </meshes/hole.mesh>` mesh (see Figure 1).
+We start from the :download:`hole.mesh </meshes/hole.mesh>` mesh (see Figure 1).
 
 .. figure:: /figures/user_guide/hole-mesh-init.png
     :align: center
