@@ -8,24 +8,26 @@ Required tools
 
 In order to obtain and compile **mmg**, the following tools are needed:
 
-  * **Git**: to download source code, a git manager is necessary. 
-    You can install a git manager from the link below but there are many other git clients that you can use:
+* **Git**: to download source code, a git manager is necessary. 
+  You can install a git manager from the link below but there are many other git clients that you can use:
     
-    * `Official Git client <https://git=scm.com/download>`_ (command-line program)
-    * `GitKraken <https://www.gitkraken.com/>`_
-    * `SourceTree <https://www.sourcetreeapp.com/>`_
+  * `Official Git client <https://git=scm.com/download>`_ (command-line program)
+  * `GitKraken <https://www.gitkraken.com/>`_
+  * `SourceTree <https://www.sourcetreeapp.com/>`_
 
-Note that if you use Microsoft Visual Studio (Windows OS), you can simply activate the Git Module of the application.
+.. note::
 
-  * **CMake** : **mmg** uses the CMake building system that can be downloaded on the
-    following `web page <https://cmake.org/download/>`_. On Windows OS,
-    once CMake is installed, please do not forget to mark the option:: 
+  if you use Microsoft Visual Studio (Windows OS), you can simply activate the Git Module of the application.
+
+* **CMake** : **mmg** uses the CMake building system that can be downloaded on the
+  following `web page <https://cmake.org/download/>`_. On Windows OS,
+  once CMake is installed, mark the option:: 
         
-      Add CMake to the system PATH for all users
+    Add CMake to the system PATH for all users
 
-******************************
-Download and compiling **mmg**
-******************************
+*********************************
+Downloading and compiling **mmg**
+*********************************
 
 Unix-like OS (Linux, macOS...)
 ##############################
@@ -36,7 +38,7 @@ Unix-like OS (Linux, macOS...)
     git clone https://github.com/MmgTools/mmg.git
 
 
-The project source file are available under the **src/** directory:
+Source files are available in the **src/** directory:
    * **src/mmg2d/**   for files related to the mmg2d application;
    * **src/mmgs/**   for files related to the mmgs application;
    * **src/mmg3d/**  for files related to the mmg3d application;
@@ -148,10 +150,10 @@ Compile with MinGW
 
 1. Get a **C Compiler**:
 
-  * **MinGW** can be downloaded via this `link <https://www.mingw=w64.org/>`_. We recommand to install the ``mingw-developer-tools``, ``mingw32-base``, ``mingw32-gcc-fortran``, ``mingw32-gcc-g++`` and ``msys-base`` packages;
-  * Edit the environment variables and add MinGW in your **PATH** variable. It can be done in the **advanced system settings** panel. (note that you must modify the **PATH** variable, not **Path**);
-  * **MinGW** binaries are probably in ``C:\MinGW\bin``
-  * the MinGW terminal is in ``C:\MinGW\msys\1.0\msys``
+* **MinGW** can be downloaded via this `link <https://www.mingw=w64.org/>`_. We recommand to install the ``mingw-developer-tools``, ``mingw32-base``, ``mingw32-gcc-fortran``, ``mingw32-gcc-g++`` and ``msys-base`` packages;
+* Edit the environment variables and add MinGW in your **PATH** variable. It can be done in the **advanced system settings** panel. (note that you must modify the **PATH** variable, not **Path**);
+* **MinGW** binaries are probably in ``C:\MinGW\bin``
+* the MinGW terminal is in ``C:\MinGW\msys\1.0\msys``
 
 2. Clone the **mmg** `repository <https://github.com/MmgTools/mmg.git>`_
 
