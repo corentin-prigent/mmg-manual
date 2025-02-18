@@ -1,5 +1,6 @@
-Tutorials
+#############
 Prerequisite:
+#############
 
     a conformal mesh at the medit file format (.mesh(b) extension) or at the gmsh file format (.msh(b) extension)
     if you have access to the VTK library built with MPI support (VTK_USE_MPI CMake’s flag setted to ON): .vtk, .vtp and .vtu paraview files are accepted too.
