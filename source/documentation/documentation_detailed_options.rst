@@ -35,6 +35,8 @@ By default, an octree cell may contain at most 64 vertices, then it is split int
 
 You can use the ``-octree`` option to modify the maximal number of vertices per octree cell or to disable the octree (option ``-octree -1``).
 
+.. _hausd-option:
+
 *****************
 ``-hausd`` option
 *****************
@@ -47,6 +49,8 @@ By default, the Hausdorff value is set to 0.01, which is a suitable value for an
 for smaller (resp. larger) objects, you may need to decrease (resp. increase) the Hausdorff parameter.
 
 Note that you can impose different Hausdorff numbers over different boundary componants using a parameter file.
+
+.. _hgrad-option:
 
 *****************
 ``-hgrad`` option
@@ -61,6 +65,8 @@ With a gradation of $h$, two adjacent edges of length $e_1$ and $e_2$ must verif
    \frac{1}{h} \leq \frac{e_1}{e_2} \leq h
 
 Default gradation value is 1.3.
+
+.. _hmax-option:
 
 **********************
 ``-hmin/-hmax`` option
@@ -107,6 +113,8 @@ Note that we preserve the mean of the edge lengths at vertices: thus, if the edg
 the resulting mesh may be far from the initial one.
 
 This option is useless if you provide a sizemap with your mesh.
+
+.. _sol-option:
 
 ***************
 ``-sol`` option
