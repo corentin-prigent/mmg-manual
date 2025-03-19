@@ -37,7 +37,8 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_title = "mmg documentation"
-html_theme = 'furo'
+html_theme = 'mmg'
+html_theme_path = ['_themes']
 html_logo  = 'figures/logo-Mmg.png'
 html_static_path = ['_static']
 

@@ -2,7 +2,7 @@
 Mesh adaptation to a solution
 #############################
 
-We want to adapt a M6 wing mesh (named aileM6.mesh) 
+The objective of this example is to adapt a M6 wing mesh (named aileM6.mesh) 
 to an isotropic size map given in the aileM6-met.sol file 
 (see figure 1 for the mesh and the metric representation).
 
