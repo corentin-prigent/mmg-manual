@@ -95,7 +95,6 @@ All other option may be activated with ``ON`` and deactivated with ``OFF``.
 For example, the following command compiles the project in debug mode, enables the compilation of the shared **mmg3d** library
 and disables the use of the **SCOTCH** library::
 
-  CMake
   cmake -D CMAKE_BUILD_TYPE=Debug -D LIBMMG3D_SHARED=ON -D USE_SCOTCH=OFF ..
 
 By default:
