@@ -2,84 +2,108 @@
 Mesh generation
 ###############
 
-You can generate a mesh from a set of points or from a set of edges.
+This section presents tutorials for using **mmg2d** for mesh generation from a
+set of points or a set of edges.
 
 ***********************************
 Mesh generation from a set of edges
 ***********************************
 
-We start from a mesh containing only edges (the acdcBdy.mesh file)
+This first example shows how to generate a mesh from a set of edges. 
+The input data (:download:`acdcBdy.mesh </meshes/acdcBdy.mesh>`) is displayed 
+below:
 
-.. figure:: /figures/user_guide/acdcEdg.png
+.. figure:: /figures/tutorials/acdcEdg.png
     :align: center
 
     Initial set of edges
 
-To generate a mesh containing these edges, we just need to run the mmg2d application. 
-Because we don’t want to smooth the font used, we specify a sharp angle detection of 10° using the -ar option::
+To generate a mesh containing these edges, run **mmg2d** with the input mesh
+name as a argument. In order to prevent the font from being smoothed out,
+specify a sharp angle detection of 10 degrees using the :ref:`-ar <ar-option>`
+option. Sharp angles will be considered as a geometric property of the mesh and
+hence will be preserved::
 
     mmg2d_O3 -ar 10 acdcBdy.mesh
 
-We obtain the following mesh:
+The output mesh ``acdcBdy.o.mesh`` is displayed below:
 
-.. figure:: /figures/user_guide/acdcNoHmax.png
+.. figure:: /figures/tutorials/acdcNoHmax.png
     :align: center
 
-    Generated mesh with a sharp angle detection of 10°
+    Generated mesh with a sharp angle detection of 10 degrees
 
-Note that mmg meshes the internal subdomains created by the edges. 
-By default, all subdomains are saved. You can choose to keep only one subdomain using the ``-nsd`` option.
+Note that **mmg** creates a mesh for all the internal subdomains created by the 
+edges, including the holes in the letters A and D. 
+By default, all subdomains are saved in the output mesh file. It is possible to 
+choose to keep only one subdomain using the ``-nsd`` option. For instance, the
+following command will only keep the letter D (domain number 6) as the 
+output mesh::
+
+    mmg2d_O3 -ar 10 -nsd 6 acdcBdy.mesh
+
+.. figure:: /figures/tutorials/acdc-nsd.png
+    :align: center
+    :height: 250 px
+
+    Generated mesh with only one sub-domain
 
 *********************
 Finer mesh generation
 *********************
 
-To generate a finer mesh we can specify a maximal edge size value using the -hmax option. 
-The mesh bounding box is of size 500x200 thus we impose a maximal edge size of 10::
+To generate a finer mesh, it is possible to specify a maximal edge size value
+using the ``-hmax`` option. In this example, since the bounding box size of the
+mesh is 500x200, we can impose a maximal edge size of 10 by running the 
+following command::
 
     mmg2d_O3 -ar 10 -hmax 10 acdcBdy.mesh
 
-.. figure:: /figures/user_guide/acdcMesh.png
+.. figure:: /figures/tutorials/acdcMesh.png
     :align: center
 
-    Generated mesh for a maximal edge size of 10 and without the non wanted subdomains
+    Generated mesh for a maximal edge size of 10 (without unwanted subdomains)
 
 ************************************
 Mesh generation from a set of points
 ************************************
 
-In our example, our initial mesh file (the square.mesh file) contains only points (it is represented on figure 1).
+In this example, let us take a look at mesh generation from a set of points.
+The initial mesh (:download:`square.mesh </meshes/square.mesh>`) is represented
+below.
 
-.. figure:: /figures/user_guide/initPoints.png
+.. figure:: /figures/tutorials/initPoints.png
     :align: center
 
-    Figure 1: Set of points from which we want to generate a mesh
+    Initial set of points
 
-To generate a mesh of the convex hull of those points, you just need to run the **mmg2d** application::
+To generate a mesh of the convex hull of these points, run **mmg2d**::
 
     mmg2d_O3 square.mesh
 
-We obtain the mesh represented on figure 2.
+The output mesh ``square.o.mesh`` is represented below:
 
-.. figure:: /figures/user_guide/squareDefault.png
+.. figure:: /figures/tutorials/squareDefault.png
     :align: center
 
-    Figure 2: Mesh generation from a set of points
+    Generated mesh from a set of points
 
-Here we have created a mesh containing all the initial vertices, then, 
-the mesh has been optimized (as no option or size map is provided, we seek to have a high mesh quality with a minimal number of vertices).
+In this execution of **mmg**, a mesh containing all the initial vertices has
+been created first. Then, the mesh has been optimized by a standard adaptation
+procedure. Since no option or size map have been provided, **mmg** attempts to 
+produce a high-quality mesh with a minimal number of vertices.
 
 **********************************
 Preservation of the initial points
 **********************************
 
-You can keep your initial points using the ``-noinsert``, ``-noswap`` and ``-nomove`` arguments::
+To keep the initial points, run **mmg** using the ``-noinsert``, ``-noswap``
+and ``-nomove`` options in order to deactivate all remeshing operations and only
+perform the mesh generation phase::
 
     mmg2d_O3 square.mesh -noinsert -nomove -noswap
 
-The resulting mesh is represented figure 3.
-
-.. figure:: /figures/user_guide/squareNoinsert.png
+.. figure:: /figures/tutorials/squareNoinsert.png
     :align: center
 
-    Figure 3: Generation of a mesh from a set of points with preservation of points
+    Generation of a mesh with preservation of initial points
