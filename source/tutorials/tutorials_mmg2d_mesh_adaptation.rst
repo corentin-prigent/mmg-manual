@@ -1,34 +1,37 @@
-#############################
-Mesh adaptation to a solution
-#############################
+###############
+Mesh adaptation
+###############
 
-We start from the :download:`hole.mesh </meshes/hole.mesh>` mesh (see Figure 1).
+In this section, some examples of mesh adaptation are presented. In all of them,
+the following mesh (:download:`hole.mesh </meshes/hole.mesh>`) is used.
 
-.. figure:: /figures/user_guide/hole-mesh-init.png
+.. figure:: /figures/tutorials/hole-mesh-init.png
     :align: center
 
-    Figure 1: Initial mesh (hole.mesh)
+    Initial mesh
 
-This mesh contains a hole and 2 domains with different references, the yellow domain and the pink one.
+This mesh contains a hole and two domains with different references (yellow and
+pink).
 
 ******************
 Default parameters
 ******************
 
-To run Mmg2d, you only have to run the application followed by the mesh name::
+To run **mmg2d** with default parameters, run the following command::
 
     mmg2d_O3 hole.mesh
 
-We obtain an output file named hole.o.mesh (Figure 2).
-Mmg tries to unrefine the mesh while preserving the maximal distance between the 
+The output mesh, stored in a file called ``hole.o.mesh`` is displayed below:
+
+.. figure:: /figures/tutorials/hole-mesh-out.png
+    :align: center
+
+    Output mesh with default parameters
+
+**mmg** attempt to unrefine the mesh while preserving the maximal distance between the 
 ideal geometry and its discretization (``-hausd`` parameter, 0.01 by default) and with 
 respect to the prescribed gradation ( ``-hgrad`` option, 1.3 by default) that impose 
 the maximal ratio between the lengths of two adjacent edges.
-
-.. figure:: /figures/user_guide/hole-mesh-out.png
-    :align: center
-
-    Figure 2: Output mesh without parameters
 
 ******************************
 Boundary approximation control
