@@ -7,11 +7,10 @@ the following mesh (:download:`hole.mesh </meshes/hole.mesh>`) is used.
 
 .. figure:: /figures/tutorials/hole-mesh-init.png
     :align: center
+    :height: 500 px
 
-    Initial mesh
-
-This mesh contains a hole and two domains with different references (yellow and
-pink).
+    Initial mesh: a square with a hole and two different domains (different
+    references)
 
 ******************
 Default parameters
@@ -21,43 +20,56 @@ To run **mmg2d** with default parameters, run the following command::
 
     mmg2d_O3 hole.mesh
 
-The output mesh, stored in a file called ``hole.o.mesh`` is displayed below:
+The output mesh, stored in a file called ``hole.o.mesh``, is displayed below:
 
 .. figure:: /figures/tutorials/hole-mesh-out.png
     :align: center
+    :height: 500 px
 
     Output mesh with default parameters
 
-**mmg** attempt to unrefine the mesh while preserving the maximal distance between the 
-ideal geometry and its discretization (``-hausd`` parameter, 0.01 by default) and with 
-respect to the prescribed gradation ( ``-hgrad`` option, 1.3 by default) that impose 
-the maximal ratio between the lengths of two adjacent edges.
+**mmg** attempt to unrefine the mesh while:
+    * preserving the maximal distance between the ideal geometry and its 
+      discretization (set with ``-hausd`` option, equal to 0.01 by default).
+    * applying the prescribed gradation (set with ``-hgrad`` option, 1.3 by
+      default) that enforces the maximal length ratio between two adjacent 
+      edges.
+    * preserving the subdomains.
 
 ******************************
 Boundary approximation control
 ******************************
 
 The boundary approximation is controlled by the Hausdorff parameter.  
-You can use the ``-hausd`` option to adapt the Hausdorff value to your needs.
-We obtain the result displayed on Figure 3 by asking for a maximal Hausdorff 
-distance of 0.1 (our mesh bounding box is [-5 ; 10]x[-5 ; 10] )::
+The ``-hausd`` option allows to adapt the Hausdorff value.
+The mesh bounding box of this example is [-5 ; 10]x[-5 ; 10]. To set a maximal
+Hausdorff distance of 0.1, run the following command::
 
     mmg2d_O3 -hausd 0.1 hole.mesh
 
-.. figure:: /figures/user_guide/hole-mesh-out2.png
+This produces the following output:
+
+.. figure:: /figures/tutorials/hole-mesh-out2.png
     :align: center
+    :height: 500 px
 
-    Figure 3: Output mesh for a hausdorff parameter of 0.1 (the square is [-5 ; 10]x[-5 ; 10])
+    Output mesh for a Hausdorff parameter of 0.1.
 
-Here, the hole boundary and the interface between the 2 domains are degraded 
-because the asked Hausdorff distance is large compared to the object sizes.
+In this example, the hole boundary and the interface between the two domains are
+degraded because the Hausdorff distance that has been set is large compared to
+the object sizes.
 
-.. note:: 
+In general, note that:
 
-    * The Hausdorff parameter leads to refine the mesh in areas with high curvature;
-    * The Hausdorff parameter depends of your mesh/object sizes, thus, the default value will rarely fit your needs;
-    * Knowing the mesh bounding box is very useful to fit the Hausdorff parameter: you can get this bounding box when you visualize your mesh with Medit;
-    * The default value (0.01) suits for a circle with radius of 1.
+* decreasing the Hausdorff parameter leads to refine the mesh in areas 
+  with high curvature.
+* the ideal Hausdorff parameter depends of mesh size and the default value will
+  rarely fit.
+* knowing the mesh bounding box is very useful to fit the Hausdorff parameter.
+  Visualizing a mesh with **Medit** is a good way to get the size of the
+  bounding box.
+* the default value of the Hausdorrf parameter is equal to 0.01 and is suitable
+  for a circle of radius 1.
 
 *********
 Gradation
@@ -65,14 +77,30 @@ Gradation
 
 The ``-hgrad`` parameter control the mesh gradation, i.e. the ratio between the
 lengths of two adjacent edges. By default, this parameter is set to 1.3.
-You can disable the gradation using the -hgrad -1 value or customize the ratio
-value using the -hgrad val option (see Figure 4). 
-Note that disabling the gradation can lead to bad quality meshes.
 
-.. figure:: /figures/user_guide/hole-mesh-gradation.png
+It is possible to:
+
+  * customize the ratio value by passing it to the ``-hgrad`` option. 
+  * disable the gradation by setting ``-hgrad -1``.
+  
+The two following meshes are obtained by running the following commands::
+
+    mmg2d_O3 -hgrad 2.3 hole.mesh
+    mmg2d_O3 -hgrad -1  hole.mesh
+
+.. figure:: /figures/tutorials/hole-mesh-gradation2.png
     :align: center
+    :height: 500 px
 
-    Figure 4: influence of the gradation parameter. Left, gradation is disabled (-hgrad -1), right, it is set to 2.3 (-hgrad 2.3)
+    Output mesh with gradation set to 2.3
+
+.. figure:: /figures/tutorials/hole-mesh-gradation.png
+    :align: center
+    :height: 500 px
+
+    Output mesh without gradation
+
+Note that disabling the gradation can lead to bad quality meshes.
 
 ******************
 Constant mesh size
