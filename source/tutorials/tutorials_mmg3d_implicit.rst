@@ -18,7 +18,8 @@ Standard level-set discretization
 *********************************
 
 The starting point of this example is a mesh of a cube and the discrete 
-level-set function defined at the mesh nodes ``elephant.sol`` displayed figure 1.
+level-set function defined at the mesh nodes ``elephant.sol`` 
+displayed figure 1.
 
 .. figure:: /figures/user_guide/elephant-ls.png
     :align: center
@@ -48,7 +49,7 @@ command::
 The output of the execution consists in two domains separated by a surface that 
 is an optimized mesh of the initial implicit surface (see figure 2).
 
-Note that **mmg** impose the reference (or color) of the isosurface and the domains:
+Note that **mmg** impose the reference (or color) of the isosurface and domains:
 
   * The isosurface corresponds to reference 10.
   * Interior volume has reference 3.
@@ -60,43 +61,55 @@ Note that **mmg** impose the reference (or color) of the isosurface and the doma
     Figure 2: Final cube mesh: Implicit surface mesh (left) and cross-section
     view through the volume cube mesh (right).
 
-*****************************************************
-Preservation of one given subdomain and analysis mode
-*****************************************************
+********************************************************
+Preservation of one specific subdomain and analysis mode
+********************************************************
 
-Mmg allows to save a given subdomain of a mesh containing multiple subdomains using the -nsd option. You can for example run Mmg on your output mesh (cube.o.mesh file) save only the elephant mesh (domain of reference 3) with the following command line:
+**mmg** allows to save a given subdomain of a mesh containing multiple 
+subdomains using the ``-nsd`` option. For example, running **mmg** with the 
+following command will save the domain of reference 3 (the elephant part of the
+mesh)::
 
-mmg3d_O3 cube.o.mesh -noinsert -noswap -nomove -nsd 3
+  mmg3d_O3 cube.o.mesh -noinsert -noswap -nomove -nsd 3
 
-Figure 3: Saving of only the subdomain of reference 3 using the -nsd option
+The coupling of ``-noinsert``, ``-noswap`` and ``-nomove`` options deactivates
+all remeshing operations, meaning that the mesh in ``cube.o.mesh`` is only 
+analyzed, and is not modified. The output is displayed on figure 3.
 
-The coupling of the -noinsert, -noswap and -nomove options forbid all the Mmg operators, thus the cube.o.mesh mesh is analyzed but not remeshed.
+.. figure:: /figures/user_guide/elephant-ls-nsd3.png
+   :align: center
+
+   Figure 3: Saving of only the subdomain of reference 3 using the ``-nsd`` 
+   option
 
 ****************************
 Boundary level-set splitting
 ****************************
 
-With -lssurf option, it is possible to split only domain boundaries along the level-set while not splitting the interior of the mesh. Starting from the peninsula.mesh mesh file, the ls.sol level-set file and the peninsula.mmg3d reference mapping (provided after command line), we run the following command:
+With ``-lssurf`` option, it is possible to only split domain boundaries along 
+the level-set while not splitting the interior of the mesh. Starting from the
+``peninsula.mesh`` mesh file, the ``ls.sol`` level-set file and the 
+``peninsula.mmg3d`` reference mapping (provided below), run the following 
+command::
 
-mmgs_O3 -lssurf peninsula.mesh
+  mmgs_O3 -lssurf peninsula.mesh
 
-cat > peninsula.mmg3d <<EOF
-LSReferences
-5
-1 10 11
-2 3 4
-38 5 6
-37 7 8
-0 nosplit
-EOF
+In this example, the reference mapping is provided as follows::
 
-we obtain the figure 4:
+  LSReferences
+  5
+  1 10 11
+  2 3 4
+  38 5 6
+  37 7 8
+  0 nosplit
+  EOF
 
-    Mesh boundaries are splitted if ask and are assigned the wanted references
-    internal domains (tetra) are not
+The result of this example is displayed on figure 4. With this option, mesh
+boundaries are split and provided references are assigned. Internal tetrahedra
+are not split. Note that all boundary references must be mapped.
 
-Boundary splitting with lssurf option
+.. figure:: /figures/user_guide/peninsula_lssurf.png
+   :align: center
 
-Figure 4: Boundaries splitting using lssurf option
-
-Note that if  a mapping is provided for one of the input boundary references, then the mapping for all boundary references has to be given too.
+   Figure 4: Boundaries split using ``-lssurf`` option

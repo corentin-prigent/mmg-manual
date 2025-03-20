@@ -2,12 +2,46 @@
 Tutorials
 #########
 
-.. toctree::
-    :maxdepth: 2
+Several tutorials and examples are provided within this section. Click on the
+links below to access them. Examples are available for **mmg2d**, **mmgs**, 
+**mmg3d**, as well as tutorials for using **mmg** as a library (available in C,
+C++ and Fortran). Meshes and metric data files are downloadable by clicking on
+their names at the beginning of each tutorial.
 
-    mmg2d <tutorials_mmg2d.rst>
-    mmgs <tutorials_mmgs.rst>
-    mmg3d <tutorials_mmg3d.rst>
+**mmg2d**
+
+.. toctree::
+    :maxdepth: 1
+
+    Mesh generation <tutorials_mmg2d_mesh_generation.rst>
+    Mesh adaption to a solution <tutorials_mmg2d_mesh_adaptation.rst>
+    Implicit domain meshing <tutorials_mmg2d_implicit.rst>
+    Lagrangian motion <tutorials_mmg2d_lagrangian.rst>
+
+**mmgs**
+
+.. toctree::
+    :maxdepth: 1
+
+    Mechanical piece remeshing <tutorials_mmgs_mesh_mechanical.rst>
+    Smooth surface remeshing <tutorials_mmgs_mesh_smooth.rst>
+    Implicit domain meshing <tutorials_mmgs_implicit.rst>
+
+**mmg3d**
+
+.. toctree::
+    :maxdepth: 1
+
+    Mesh quality improvement <tutorials_mmg3d_improvement.rst>
+    Open boundary remeshing <tutorials_mmg3d_remeshing.rst>
+    Mesh adaptation to a solution <tutorials_mmg3d_solution.rst>
+    Implicit domain meshing <tutorials_mmg3d_implicit.rst>
+
+**Libraries**
+
+.. toctree::
+    :maxdepth: 1
+
     Libraries <tutorials_libraries.rst>
 
 *************
@@ -15,8 +49,8 @@ Prerequisites
 *************
 
 Once installed, **mmg** can be used as a command-line tool in any given shell.
-Three different software are produced by the compilation, one for each given configuration: **mmg2d**,
-**mmgs**, **mmg3d**.
+Three different software are produced by the compilation, one for each given
+configuration: **mmg2d**, **mmgs**, **mmg3d**.
 
 A help message containing a summary of the main options may be printed::
 
@@ -72,9 +106,12 @@ metric data should be provided according to mesh file format.
 
 * metric data may be provided as a **Medit** solution file (``.sol`` extension).
   If the file has the same name as the mesh file, it is automatically opened
-  and treated as metric data (assuming that level-set discretization mode is disabled).
-* ``-met``/``-sol`` options may be indistinctly used to specify the file name if it different from the mesh file name.
-* In level-set discretization mode, metric files are ignored by default and must be loaded with the ``-met`` option.
+  and treated as metric data (assuming that level-set discretization mode is
+  disabled).
+* ``-met``/``-sol`` options may be indistinctly used to specify the file name 
+  if it different from the mesh file name.
+* In level-set discretization mode, metric files are ignored by default and
+  must be loaded with the ``-met`` option.
 
 **GMSH file format (.msh or .mshb)**: size map data should be provided in the 
 mesh file as ``\$NodeData`` and flagged using a string tag with the ``:metric`` 
@@ -91,9 +128,9 @@ provided. Similarly to metric data, its format depends on mesh file format.
 
 **Medit file format**
 
-* solution data may be provided as a **Medit** solution file (``.sol`` extension).
-  If the file has the same name as the mesh file, it is automatically opened
-  and treated as solution data.
+* solution data may be provided as a **Medit** solution file (``.sol`` 
+  extension). If the file has the same name as the mesh file, it is 
+  automatically opened and treated as solution data.
 * ``-sol`` options may be used to specify the file name if it different from 
   the mesh file name.
 
@@ -132,13 +169,3 @@ Mesh visualization
   with embedded solution data.
 * `Paraview <https://www.paraview.org/>`_: for visualizing meshes at
   **VTK** file formats.
-
-*********
-Tutorials
-*********
-
-Several tutorials and examples are provided within this section. Click on the
-links at the top of the page to access them. Examples are available for
-**mmg2d**, **mmgs**, **mmg3d**, as well as tutorials for using **mmg** as a
-library (available in C and Fortran). Meshes and metric data files are
-downloadable by clicking on their names at the beginning of each tutorial.

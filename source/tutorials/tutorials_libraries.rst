@@ -1,14 +1,6 @@
-#################
-Library tutorials
-#################
-
-.. toctree::
-    :maxdepth: 2
-
-
-**************
+##############
 Usage examples
-**************
+##############
 
 Some library examples are provided in the **mmg** repository, under the 
 `libexamples <https://github.com/MmgTools/mmg/tree/master/libexamples>`_ 
@@ -56,9 +48,9 @@ Note that the APIs of the 3 codes works in the same way except that:
   * in 2D, the ``MMG2D_Set_vertex`` function takes 2D coordinates while the 
     ``MMGS_Set_vertex`` and ``MMG3D_Set_vertex`` functions take 3D coordinates.
 
-*****************************
+#############################
 How to link **mmg** libraries
-*****************************
+#############################
 
 By default, the ``make install`` command installs the libraries into the 
 ``/usr/local/lib`` directory. The header files are located into the 
